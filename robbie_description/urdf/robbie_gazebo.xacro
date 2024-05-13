@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot name="robbie" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<transmission name="wheel_right_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>  <!-- type of transmission-->
+        <actuator name="wheel_right_motor" role="actuator_right"/> 
+        <joint name="right_front_wheel_joint" role="joint_right">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+    <transmission name="wheel_left_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>
+        <actuator name="wheel_left_motor" role="actuator_left"/>
+        <joint name="left_front_wheel_joint" role="joint_left">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+	<transmission name="caster_left_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>
+        <actuator name="caster_left_motor" role="actuator_left"/>
+        <joint name="castor_left_joint" role="joint_left">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+	<transmission name="rearwheel_left_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>
+        <actuator name="rearwheel_left_motor" role="actuator_left"/>
+        <joint name="left_rear_wheel_joint" role="joint_left">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+	<transmission name="caster_right_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>  <!-- type of transmission-->
+        <actuator name="caster_right_motor" role="actuator_right"/> 
+        <joint name="castor_right_joint" role="joint_right">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+	<transmission name="rearwheel_right_transmission">
+        <plugin>transmission_interface/SimpleTransmission</plugin>  <!-- type of transmission-->
+        <actuator name="rearwheel_right_motor" role="actuator_right"/> 
+        <joint name="right_rear_wheel_joint" role="joint_right">
+            <mechanical_reduction>1.0</mechanical_reduction>
+        </joint>
+
+    </transmission>
+
+</robot>
